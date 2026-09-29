@@ -1,0 +1,11 @@
+# Moving Day · วันย้ายบ้าน
+
+> Moving from one AI chat service to another: export, carry memory and instructions, settle in, close up. Thai first, English toggle. Checked against vendor help pages 29 Sep 2026.
+
+- Pick From and To among ChatGPT, Claude, Gemini, Copilot, Meta AI, Grok, Perplexity, DeepSeek, Le Chat / Vibe, Kimi, and your own computer; the page gives the menu path for each step, with sources.
+- Official imports found: Claude (Settings → Memory → Start import, memory only); Gemini (Import memory, and Import chats from a ChatGPT or Claude export .zip; not in the EU, Switzerland or UK).
+- The moving letter: a prompt that asks the old AI to write down your instructions, memories, projects and preferences for the new one.
+- Request letter builder: access and portability under Thailand PDPA s.30–31, EU and UK GDPR Art. 15 and 20, California CCPA §1798.110 and §1798.130, Brazil LGPD Art. 18.
+- Running open-weights models on your own computer or phone: LM Studio, Jan, Ollama, PocketPal AI, Typhoon.
+
+Text CC BY 4.0, code MIT. https://github.com/NaNoBotCo/moving-day
