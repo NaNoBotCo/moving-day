@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="th" data-lang="th" translate="no" class="notranslate">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="google" content="notranslate">
+<title>Moving Day</title>
+<meta name="description" content="Moving from one AI to another, step by step: export your chats, carry your memories and instructions, settle them into the new place. ChatGPT, Claude, Gemini, Copilot, Meta AI, Grok, Perplexity, DeepSeek, Le Chat, Kimi, and your own computer. Thai and English.">
+<link rel="canonical" href="https://nanobotco.github.io/moving-day/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="NaNoBotCo">
+<meta property="og:title" content="Moving Day · วันย้ายบ้าน">
+<meta property="og:description" content="ย้ายจาก AI ตัวหนึ่งไปอีกตัว ขนแชท ความจำ และการตั้งค่าไปด้วย · Moving from one AI to another, with your chats, memories and settings.">
+<meta property="og:url" content="https://nanobotco.github.io/moving-day/">
+<meta property="og:image" content="https://nanobotco.github.io/moving-day/card.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A little truck carrying boxes from one house to another, with the words Moving Day in English and Thai.">
+<meta property="og:locale" content="th_TH"><meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://nanobotco.github.io/moving-day/card.jpg">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="alternate" type="text/plain" href="https://nanobotco.github.io/moving-day/llms.txt" title="llms.txt">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Sarabun:wght@400;600&family=Mitr:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#fff8ec; --panel:#ffffff; --ink:#20242a; --muted:#5b6270; --rule:#ecdcc0;
+  --box:#c98a4b; --boxdark:#9a6331; --tape:#f3d27a; --teal:#127a70; --pink:#d8467d; --sun:#f6b623; --sky:#dff1f7; --grass:#8fcf7a; --blue:#2f6fcf; --shadow:#20242a;
+  --display:"Baloo 2","Mitr",system-ui,sans-serif; --thai-display:"Mitr","Sarabun",Tahoma,sans-serif;
+  --body:"Sarabun",Tahoma,system-ui,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ground:#17140f; --panel:#221d16; --ink:#f3ece0; --muted:#b5ab9a; --rule:#3d3326;
+  --box:#d99a5b; --boxdark:#a8703c; --tape:#e8c565; --teal:#4cc2b3; --pink:#ef7aa6; --sun:#f6c04a; --sky:#1d2a33; --grass:#4f8a45; --blue:#6aa0f0; --shadow:#000; color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --ground:#17140f; --panel:#221d16; --ink:#f3ece0; --muted:#b5ab9a; --rule:#3d3326;
+  --box:#d99a5b; --boxdark:#a8703c; --tape:#e8c565; --teal:#4cc2b3; --pink:#ef7aa6; --sun:#f6c04a; --sky:#1d2a33; --grass:#4f8a45; --blue:#6aa0f0; --shadow:#000; color-scheme:dark;}
+*{box-sizing:border-box}
+html,body{background:var(--ground);color:var(--ink)}
+body{margin:0;font:21px/1.7 var(--body);padding-inline:16px;padding-block:0 72px}
+.wrap{max-width:760px;margin:0 auto}
+a{color:var(--teal)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+[data-lang="en"] .th{display:none!important}
+[data-lang="th"] .en{display:none!important}
+header.bar{display:flex;align-items:center;gap:12px;max-width:760px;margin:0 auto;padding-block:14px}
+.brand{font:800 20px var(--display);margin-right:auto;text-decoration:none;color:var(--ink)}
+.lang{display:flex;border:2px solid var(--ink);border-radius:999px;overflow:hidden}
+.lang button{font:600 18px var(--body);background:none;border:0;color:var(--ink);padding:6px 18px;cursor:pointer;min-height:44px}
+.lang button[aria-pressed="true"]{background:var(--ink);color:var(--ground)}
+h1,h2,h3{margin:0;line-height:1.15;text-wrap:balance;font-weight:800;font-family:var(--display)}
+[data-lang="th"] h1,[data-lang="th"] h2,[data-lang="th"] h3{font-family:var(--thai-display);font-weight:500}
+h1{font-size:clamp(46px,11vw,80px)}
+h2{font-size:clamp(30px,6vw,42px);display:flex;gap:14px;align-items:center}
+h2 svg{flex:none;width:54px;height:54px}
+h3{font-size:25px;margin-top:18px}
+.hero{padding-top:6px}
+.hero svg{display:block;width:100%;height:auto;margin:10px 0 4px}
+.lede{font-size:24px;margin:.4em 0}
+.pen{background:var(--panel);border:3px solid var(--ink);border-radius:20px;padding:22px 22px 18px;margin:30px 0;box-shadow:6px 6px 0 var(--shadow)}
+.pen p{margin:.55em 0}
+.small{font-size:17px;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0;padding:0;list-style:none}
+.chips li{background:var(--tape);color:#20242a;border-radius:999px;padding:4px 14px;font-size:18px;font-weight:600}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:14px 0;padding:0;list-style:none}
+.steps li{border:3px solid var(--ink);border-radius:16px;padding:12px;background:var(--ground);text-align:center}
+.steps b{display:block;font:800 40px/1 var(--display);color:var(--pink)}
+.steps a{color:var(--ink);text-decoration:none;font-weight:600}
+table{border-collapse:collapse;width:100%;font-size:18px;margin:10px 0}
+th,td{text-align:left;vertical-align:top;padding:8px 6px;border-bottom:2px solid var(--rule)}
+th{font-weight:600}
+td,th{overflow-wrap:anywhere}
+@media (max-width:560px){table,thead,tbody,tr,td{display:block}thead{display:none}tr{border-bottom:2px solid var(--rule);padding:6px 0}td{border:0;padding:2px 0}td:first-child{font-weight:600}}
+.pick{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 14px}
+.pick button{font:600 18px var(--body);min-height:48px;padding:6px 16px;border-radius:999px;border:3px solid var(--ink);background:var(--panel);color:var(--ink);cursor:pointer}
+.pick button[aria-pressed="true"]{background:var(--teal);border-color:var(--teal);color:#fff}
+.pick button:disabled{opacity:.35;cursor:default}
+.label{font:600 18px var(--body);color:var(--muted);margin-top:10px}
+ol.plan{padding-left:0;list-style:none;counter-reset:s;margin:10px 0}
+ol.plan>li{counter-increment:s;position:relative;padding:12px 0 12px 62px;border-top:2px dashed var(--rule)}
+ol.plan>li::before{content:counter(s);position:absolute;left:0;top:12px;width:46px;height:46px;border-radius:12px;background:var(--box);color:#fff;font:800 28px/46px var(--display);text-align:center;box-shadow:inset 0 -6px 0 var(--boxdark)}
+ol.plan h3{margin:0 0 4px;font-size:23px}
+.path{font-family:ui-monospace,Menlo,monospace;font-size:17px;background:var(--sky);border-radius:8px;padding:2px 8px;display:inline-block;margin:2px 0}
+.src{font-size:15px;color:var(--muted)}
+.copy{position:relative}
+textarea{width:100%;min-height:260px;font:18px/1.55 var(--body);color:var(--ink);background:var(--ground);border:2px solid var(--rule);border-radius:12px;padding:12px;resize:vertical}
+.btn{font:600 19px var(--body);min-height:50px;padding:8px 22px;border-radius:999px;border:3px solid var(--ink);background:var(--sun);color:#20242a;cursor:pointer;box-shadow:3px 3px 0 var(--shadow)}
+.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--shadow)}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:10px 0}
+label.f{display:flex;flex-direction:column;gap:4px;font-size:18px;flex:1 1 220px;min-width:0}
+label.f input,label.f select{width:100%;min-width:0}
+label.f input,label.f select{font:19px var(--body);min-height:48px;padding:6px 10px;border:2px solid var(--rule);border-radius:10px;background:var(--ground);color:var(--ink)}
+.tips{padding-left:1.1em}
+.tips li{margin:.45em 0}
+.done{color:var(--teal);font-weight:600}
+footer{max-width:760px;margin:40px auto 0;font-size:16px;color:var(--muted)}
+footer ol{padding-left:1.2em}
+footer li{margin:.3em 0;overflow-wrap:anywhere}
+@media (prefers-reduced-motion:reduce){.truck{animation:none!important}}
+.truck{animation:drive 7s ease-in-out infinite}
+@keyframes drive{0%,8%{transform:translateX(0)}46%,54%{transform:translateX(260px)}92%,100%{transform:translateX(0)}}
+</style>
+</head>
+<body>
+<header class="bar">
+  <a class="brand" href="#top"><span class="th">วันย้ายบ้าน</span><span class="en">Moving Day</span></a>
+  <div class="lang" role="group" aria-label="ภาษา / Language">
+    <button type="button" data-l="th" aria-pressed="true">ไทย</button>
+    <button type="button" data-l="en" aria-pressed="false">EN</button>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+<section class="hero">
+  <svg viewBox="0 0 720 250" role="img" aria-label="A little truck carries boxes from one house to another">
+    <rect x="0" y="0" width="720" height="250" rx="22" fill="var(--sky)"/>
+    <circle cx="630" cy="56" r="28" fill="var(--sun)"/>
+    <rect x="0" y="206" width="720" height="44" rx="0" fill="var(--grass)"/>
+    <rect x="0" y="206" width="720" height="10" fill="#6a6f78"/>
+    <!-- old house -->
+    <g transform="translate(26,86)">
+      <polygon points="0,52 70,0 140,52" fill="var(--pink)" stroke="#20242a" stroke-width="4" stroke-linejoin="round"/>
+      <rect x="14" y="52" width="112" height="70" fill="#fff" stroke="#20242a" stroke-width="4"/>
+      <rect x="56" y="80" width="28" height="42" fill="var(--box)" stroke="#20242a" stroke-width="3"/>
+      <text x="70" y="148" text-anchor="middle" font-family="Mitr,sans-serif" font-size="17" fill="var(--ink)">บ้านเก่า · old</text>
+    </g>
+    <!-- new house -->
+    <g transform="translate(554,86)">
+      <polygon points="0,52 70,0 140,52" fill="var(--teal)" stroke="#20242a" stroke-width="4" stroke-linejoin="round"/>
+      <rect x="14" y="52" width="112" height="70" fill="#fff" stroke="#20242a" stroke-width="4"/>
+      <rect x="56" y="80" width="28" height="42" fill="var(--sun)" stroke="#20242a" stroke-width="3"/>
+      <path d="M70 26 l6 -8 a6 6 0 0 1 8 8 l-14 14 l-14 -14 a6 6 0 0 1 8 -8z" fill="var(--pink)"/>
+      <text x="70" y="148" text-anchor="middle" font-family="Mitr,sans-serif" font-size="17" fill="var(--ink)">บ้านใหม่ · new</text>
+    </g>
+    <!-- truck -->
+    <g class="truck">
+      <g transform="translate(172,120)">
+        <rect x="0" y="12" width="96" height="62" rx="6" fill="#fff" stroke="#20242a" stroke-width="4"/>
+        <rect x="8" y="28" width="26" height="26" fill="var(--box)" stroke="#20242a" stroke-width="3"/><rect x="18" y="28" width="6" height="26" fill="var(--tape)"/>
+        <rect x="36" y="22" width="26" height="32" fill="var(--box)" stroke="#20242a" stroke-width="3"/><rect x="46" y="22" width="6" height="32" fill="var(--tape)"/>
+        <rect x="64" y="30" width="24" height="24" fill="var(--box)" stroke="#20242a" stroke-width="3"/><rect x="73" y="30" width="6" height="24" fill="var(--tape)"/>
+        <path d="M96 30 h26 l14 20 v24 h-40z" fill="var(--sun)" stroke="#20242a" stroke-width="4" stroke-linejoin="round"/>
+        <rect x="104" y="36" width="14" height="14" fill="var(--sky)" stroke="#20242a" stroke-width="3"/>
+        <circle cx="24" cy="78" r="11" fill="#20242a"/><circle cx="24" cy="78" r="4" fill="#ccc"/>
+        <circle cx="112" cy="78" r="11" fill="#20242a"/><circle cx="112" cy="78" r="4" fill="#ccc"/>
+      </g>
+    </g>
+  </svg>
+  <h1><span class="th">วันย้ายบ้าน</span><span class="en">Moving Day</span></h1>
+  <p class="lede th">ย้ายจาก AI ตัวหนึ่งไปอีกตัว แชท ความจำ และการตั้งค่าที่คุณพิมพ์ไว้ เป็นข้อมูลของคุณ ขนไปด้วยได้</p>
+  <p class="lede en">Moving from one AI to another. The chats, memories and settings you typed are your data. Take them with you.</p>
+  <ul class="chips th"><li>ถูกกว่า</li><li>เก่งภาษาไทยกว่า</li><li>กฎเปลี่ยน</li><li>ข้อความหมด</li><li>เพื่อนใช้อีกตัว</li><li>อยากใช้ในเครื่องตัวเอง</li><li>ไม่มีเหตุผล</li></ul>
+  <ul class="chips en"><li>cheaper</li><li>better Thai</li><li>the rules changed</li><li>ran out of messages</li><li>friends use another one</li><li>want it on my own computer</li><li>no reason</li></ul>
+  <p class="th">เหตุผลอะไรก็ได้ กฎหมายคุ้มครองข้อมูลไม่ถามว่าทำไม</p>
+  <p class="en">Any reason is fine. Data protection law doesn't ask why.</p>
+  <ol class="steps">
+    <li><b>1</b><a href="#pack"><span class="th">แพ็กของ</span><span class="en">Pack</span></a><div class="small th">ดาวน์โหลดแชท</div><div class="small en">export chats</div></li>
+    <li><b>2</b><a href="#box"><span class="th">จดหมายย้ายบ้าน</span><span class="en">Moving letter</span></a><div class="small th">ความจำ + คำสั่ง</div><div class="small en">memory + instructions</div></li>
+    <li><b>3</b><a href="#movein"><span class="th">ย้ายเข้า</span><span class="en">Move in</span></a><div class="small th">ใส่ในบ้านใหม่</div><div class="small en">set up the new one</div></li>
+    <li><b>4</b><a href="#close"><span class="th">ปิดบ้านเก่า</span><span class="en">Close up</span></a><div class="small th">ถ้าอยาก</div><div class="small en">if you want</div></li>
+  </ol>
+</section>
+
+<section class="pen" id="yours">
+  <h2><svg viewBox="0 0 54 54" aria-hidden="true"><rect x="6" y="18" width="42" height="30" rx="4" fill="var(--box)" stroke="currentColor" stroke-width="3"/><rect x="23" y="18" width="8" height="30" fill="var(--tape)"/><path d="M16 18 a11 11 0 0 1 22 0" fill="none" stroke="currentColor" stroke-width="4"/></svg><span class="th">ของคุณ</span><span class="en">Yours</span></h2>
+  <p class="th">ในหลายประเทศ กฎหมายให้สิทธิ์คุณขอสำเนาข้อมูลของตัวเอง ขอในรูปไฟล์ที่เอาไปใช้ที่อื่นได้ และขอให้ลบ บริษัทต้องตอบภายในเวลาที่กฎหมายกำหนด</p>
+  <p class="en">In many countries the law gives you the right to a copy of your data, in a file you can take elsewhere, and the right to have it deleted. The company has to answer within a set time.</p>
+  <div id="laws"></div>
+  <p class="small th">ปุ่ม “Export” ในแอปเร็วที่สุด ถ้าไม่มีปุ่ม ใช้<a href="#letter">จดหมายขอข้อมูล</a>ข้างล่าง</p>
+  <p class="small en">The app's Export button is fastest. No button? Use the <a href="#letter">request letter</a> below.</p>
+</section>
+
+<section class="pen" id="pack">
+  <h2><svg viewBox="0 0 54 54" aria-hidden="true"><path d="M8 20 L27 10 L46 20 V44 L27 52 L8 44Z" fill="var(--box)" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M8 20 L27 30 L46 20 M27 30 V52" fill="none" stroke="currentColor" stroke-width="3"/><path d="M17 15 L36 25" stroke="var(--tape)" stroke-width="6"/></svg><span class="th">ย้ายจากไหน ไปไหน</span><span class="en">From where, to where</span></h2>
+  <div class="label"><span class="th">จาก (บ้านเก่า)</span><span class="en">From (old)</span></div>
+  <div class="pick" id="from" role="group" aria-label="From"></div>
+  <div class="label"><span class="th">ไป (บ้านใหม่)</span><span class="en">To (new)</span></div>
+  <div class="pick" id="to" role="group" aria-label="To"></div>
+  <div id="plan" aria-live="polite"></div>
+</section>
+
+<section class="pen" id="box">
+  <h2><svg viewBox="0 0 54 54" aria-hidden="true"><rect x="6" y="12" width="42" height="32" rx="4" fill="#fff" stroke="currentColor" stroke-width="3"/><path d="M6 14 L27 32 L48 14" fill="none" stroke="currentColor" stroke-width="3"/><path d="M27 40 l4 -5 a4 4 0 0 1 6 5 l-10 9 l-10 -9 a4 4 0 0 1 6 -5z" fill="var(--pink)"/></svg><span class="th">จดหมายย้ายบ้าน</span><span class="en">The moving letter</span></h2>
+  <p class="th">ไฟล์ export มีแชทครบ แต่ AI ตัวใหม่อ่านแชทเป็นพัน ๆ อันไม่ไหว ให้ AI ตัวเก่าเขียนสรุปว่ารู้อะไรเกี่ยวกับคุณบ้าง แล้วเอาจดหมายนี้ไปให้ตัวใหม่ คัดลอกข้อความนี้ไปวางในแชทใหม่ที่บ้านเก่า</p>
+  <p class="en">The export holds every chat, but a new AI can't read thousands of them. Ask the old AI to write down what it knows about you, then hand that letter to the new one. Copy this into a new chat at the old place.</p>
+  <div class="copy">
+    <textarea id="letterOut" readonly aria-label="Moving letter prompt"></textarea>
+    <div class="row"><button type="button" class="btn" data-copy="letterOut"><span class="th">คัดลอก</span><span class="en">Copy</span></button><span class="done" hidden></span></div>
+  </div>
+  <p class="small th">อ่านคำตอบก่อนเอาไปใช้ ลบอะไรที่ผิดหรือไม่อยากให้ตัวใหม่รู้ เก็บคำตอบไว้ในไฟล์ข้อความบนเครื่องคุณ</p>
+  <p class="small en">Read the answer before you use it. Cut anything wrong, or anything you'd rather the new one didn't know. Save it as a text file on your own computer.</p>
+</section>
+
+<section class="pen" id="movein">
+  <h2><svg viewBox="0 0 54 54" aria-hidden="true"><path d="M8 24 H46 V46 H8Z" fill="var(--box)" stroke="currentColor" stroke-width="3"/><path d="M8 24 L2 14 L22 10 L27 24 M46 24 L52 14 L32 10 L27 24" fill="var(--tape)" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><circle cx="27" cy="8" r="3" fill="var(--sun)"/><circle cx="17" cy="4" r="2" fill="var(--pink)"/><circle cx="37" cy="4" r="2" fill="var(--teal)"/></svg><span class="th">ย้ายเข้า</span><span class="en">Move in</span></h2>
+  <p class="th">ที่บ้านใหม่ เปิดแชทใหม่ วางข้อความนี้ ตามด้วยจดหมายย้ายบ้าน แล้วบันทึกส่วนที่ใช้ได้ลงในช่อง “คำสั่ง” หรือ “ความจำ” ของแอปใหม่ (ดูขั้นตอนในแผนข้างบน)</p>
+  <p class="en">At the new place, open a new chat, paste this, then the moving letter under it. Save what fits into the new app's instructions or memory (the plan above says where).</p>
+  <div class="copy">
+    <textarea id="moveinOut" readonly aria-label="Move-in prompt" style="min-height:180px"></textarea>
+    <div class="row"><button type="button" class="btn" data-copy="moveinOut"><span class="th">คัดลอก</span><span class="en">Copy</span></button><span class="done" hidden></span></div>
+  </div>
+  <h3><span class="th">งานโปรเจกต์และไฟล์</span><span class="en">Projects and files</span></h3>
+  <p class="th">ไฟล์ที่คุณเคยอัปโหลด (PDF รูป เอกสาร) อยู่บนเครื่องคุณหรือในไฟล์ export อัปโหลดใหม่เข้า “Project” หรือ “Space” ของบ้านใหม่ แชทเก่าเรื่องไหนสำคัญ เปิดไฟล์ export หาแชทนั้น คัดลอกไปวาง</p>
+  <p class="en">Files you uploaded (PDFs, pictures, documents) are on your computer or in the export. Upload them again into the new app's Project or Space. For an old chat that matters, find it in the export and paste it in.</p>
+</section>
+
+<section class="pen" id="close">
+  <h2><svg viewBox="0 0 54 54" aria-hidden="true"><polygon points="4,26 27,8 50,26" fill="var(--pink)" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><rect x="10" y="26" width="34" height="22" fill="#fff" stroke="currentColor" stroke-width="3"/><rect x="21" y="30" width="12" height="18" fill="var(--box)" stroke="currentColor" stroke-width="3"/><circle cx="30" cy="40" r="1.8" fill="currentColor"/></svg><span class="th">ก่อนปิดบ้านเก่า</span><span class="en">Before you close the old house</span></h2>
+  <ul class="tips th">
+    <li><b>เปิดไฟล์ zip ดูก่อน</b> แชทเปิดได้ไหม รูปและไฟล์แนบอยู่ครบไหม ไฟล์ใหญ่ดาวน์โหลดขาดกลางทางได้ ถ้าไม่ครบ ขอ export ใหม่</li>
+    <li><b>เก็บสองที่</b> ในเครื่อง และใน USB หรือไดรฟ์ออนไลน์</li>
+    <li><b>ลิงก์ดาวน์โหลดหมดอายุ</b> บางแอปให้เวลาแค่วันเดียว ดาวน์โหลดทันทีที่อีเมลมา</li>
+    <li><b>export อีกครั้งก่อนลบ</b> แชทที่คุยหลัง export ครั้งแรกไม่อยู่ในไฟล์เก่า</li>
+    <li><b>ไฟล์นี้คือทุกอย่างที่คุณเคยพิมพ์</b> เก็บเหมือนสมุดบันทึก อย่าส่งให้ใคร</li>
+    <li><b>ยกเลิกสมาชิกก่อนลบบัญชี</b> ถ้าจ่ายรายเดือนผ่าน App Store หรือ Google Play ต้องยกเลิกที่นั่นด้วย</li>
+    <li><b>ลบแล้วส่วนใหญ่เอาคืนไม่ได้</b> ไม่ต้องรีบ เก็บบัญชีไว้เฉย ๆ ก็ได้ ปิดการใช้แชทฝึก AI แทน</li>
+  </ul>
+  <ul class="tips en">
+    <li><b>Open the zip first.</b> Do the chats open? Are pictures and attachments there? Big downloads can stop partway. If anything's missing, ask for a new export.</li>
+    <li><b>Keep two copies:</b> on your computer, and on a USB stick or cloud drive.</li>
+    <li><b>Download links expire,</b> some within a day. Download as soon as the email comes.</li>
+    <li><b>Export again before you delete.</b> Chats after the first export aren't in it.</li>
+    <li><b>This file is everything you ever typed.</b> Keep it like a diary. Don't send it to anyone.</li>
+    <li><b>Cancel the subscription before deleting.</b> If you pay through the App Store or Google Play, cancel there too.</li>
+    <li><b>Deleting is usually for good.</b> No hurry. You can leave the account idle and turn off training on your chats instead.</li>
+  </ul>
+</section>
+
+<section class="pen" id="letter">
+  <h2><svg viewBox="0 0 54 54" aria-hidden="true"><rect x="10" y="4" width="34" height="46" rx="3" fill="#fff" stroke="currentColor" stroke-width="3"/><path d="M17 16h20M17 24h20M17 32h13" stroke="currentColor" stroke-width="3"/><circle cx="38" cy="41" r="7" fill="var(--pink)" stroke="currentColor" stroke-width="2"/></svg><span class="th">จดหมายขอข้อมูล</span><span class="en">Request letter</span></h2>
+  <p class="th">ใช้เมื่อแอปไม่มีปุ่ม export หรือไฟล์ที่ได้ไม่ครบ กรอกข้อมูล แล้วคัดลอกไปส่งที่ช่องทางความเป็นส่วนตัวของบริษัท</p>
+  <p class="en">For when the app has no export button, or the file came back incomplete. Fill in, copy, and send to the company's privacy channel.</p>
+  <div class="row">
+    <label class="f"><span class="th">ชื่อ</span><span class="en">Name</span><input id="lName" autocomplete="off"></label>
+    <label class="f"><span class="th">อีเมลบัญชี</span><span class="en">Account email</span><input id="lEmail" type="email" autocomplete="off"></label>
+  </div>
+  <div class="row">
+    <label class="f"><span class="th">บริษัท</span><span class="en">Company</span><select id="lCo"></select></label>
+    <label class="f"><span class="th">คุณอยู่ที่ไหน</span><span class="en">Where you live</span><select id="lLaw"></select></label>
+  </div>
+  <p id="lSend" class="small"></p>
+  <textarea id="reqOut" readonly aria-label="Request letter"></textarea>
+  <div class="row"><button type="button" class="btn" data-copy="reqOut"><span class="th">คัดลอก</span><span class="en">Copy</span></button><span class="done" hidden></span></div>
+  <p class="small th">จดหมายเป็นภาษาอังกฤษ บริษัทส่วนใหญ่อยู่ต่างประเทศ จดวันที่ส่งไว้</p>
+  <p class="small en">Write down the date you sent it.</p>
+</section>
+
+<section class="pen" id="own">
+  <h2><svg viewBox="0 0 54 54" aria-hidden="true"><rect x="4" y="8" width="46" height="30" rx="4" fill="var(--sky)" stroke="currentColor" stroke-width="3"/><path d="M18 48h18M27 38v10" stroke="currentColor" stroke-width="3"/><polygon points="16,26 27,17 38,26" fill="var(--teal)"/><rect x="19" y="26" width="16" height="8" fill="#fff" stroke="currentColor" stroke-width="2"/></svg><span class="th">บ้านของตัวเอง</span><span class="en">A house of your own</span></h2>
+  <p class="th">โมเดลแบบเปิด (open weights คือ AI ที่ใครก็ดาวน์โหลดตัวโมเดลไปรันเองได้) ทำงานในคอมพิวเตอร์หรือมือถือของคุณ แชทเป็นไฟล์อยู่ในเครื่อง ย้ายไปไหนก็คัดลอกโฟลเดอร์ไป</p>
+  <p class="en">Open-weights models (AI whose model file anyone can download and run) work on your own computer or phone. The chats are files on that machine; to move, copy the folder.</p>
+  <div id="ownList"></div>
+  <p class="small th">โมเดลเล็กในมือถือตอบช้ากว่าและรู้น้อยกว่าตัวใหญ่ในเว็บ คอมพิวเตอร์ที่มี RAM 16 GB ขึ้นไปรันตัวกลาง ๆ ได้สบาย</p>
+  <p class="small en">A small model on a phone is slower and knows less than the big ones on the web. A computer with 16 GB of memory or more runs mid-size ones comfortably.</p>
+</section>
+</main>
+
+<footer>
+  <p><span class="th">ข้อมูลตรวจจากหน้าช่วยเหลือของแต่ละบริษัท</span><span class="en">Checked against each company's help pages</span> <span id="checked"></span>. <span class="th">เมนูเปลี่ยนบ่อย ถ้าหาไม่เจอ ลองค้นคำว่า “export” ในการตั้งค่า</span><span class="en">Menus move. If a step isn't where it says, search Settings for “export”.</span></p>
+  <ol id="sources"></ol>
+  <p><span class="th">ข้อความและภาพ</span><span class="en">Text and pictures</span> CC BY 4.0 · <span class="th">โค้ด</span><span class="en">code</span> MIT · <a href="https://github.com/NaNoBotCo/moving-day">NaNoBotCo/moving-day</a> · <a href="https://nanobotco.github.io/index/">NaNoBotCo</a></p>
+</footer>
+
+<script>
+/*DATA-START*/
+var PROMPTS={
+letter:{
+en:"I'm moving to another AI assistant. Write a letter to it about me, so it can pick up where you leave off.\n\n1. My custom instructions, word for word.\n2. Every saved memory about me, word for word.\n3. Projects I'm working on: name, goal, where each one stands.\n4. How I like answers: length, tone, language, format.\n5. People, places and things I mention often, one line each.\n6. Anything I've asked you to always or never do.\n\nPlain text with short headings. Only what I told you or what you saved; if you're unsure, leave it out.",
+th:"ฉันกำลังย้ายไปใช้ AI ตัวอื่น ช่วยเขียนจดหมายถึงเขาเรื่องฉัน ให้เขาทำงานต่อจากคุณได้\n\n1. คำสั่งที่ฉันตั้งไว้ (custom instructions) คัดมาทุกคำ\n2. ความจำเกี่ยวกับฉันที่คุณบันทึกไว้ทั้งหมด คัดมาทุกคำ\n3. โปรเจกต์ที่ฉันทำอยู่: ชื่อ เป้าหมาย ทำถึงไหนแล้ว\n4. ฉันชอบคำตอบแบบไหน: ยาวแค่ไหน น้ำเสียง ภาษา รูปแบบ\n5. คน สถานที่ และสิ่งที่ฉันพูดถึงบ่อย บรรทัดละอย่าง\n6. อะไรที่ฉันขอให้ทำทุกครั้ง หรือห้ามทำ\n\nเขียนเป็นข้อความธรรมดา มีหัวข้อสั้น ๆ เอาเฉพาะที่ฉันบอกหรือที่คุณบันทึกไว้ ถ้าไม่แน่ใจ ไม่ต้องใส่"},
+movein:{
+en:"I've moved here from another AI assistant. Below is a letter it wrote about me. Read it, then:\n\n1. Tell me in five short lines what you'll keep in mind.\n2. Ask me about anything unclear or out of date.\n3. Tell me which parts I should save into your memory or custom instructions, and where to find those settings.\n\n--- letter ---\n",
+th:"ฉันย้ายมาจาก AI ตัวอื่น ข้างล่างคือจดหมายที่เขาเขียนถึงคุณเรื่องฉัน อ่านแล้ว:\n\n1. บอกฉันสั้น ๆ 5 บรรทัด ว่าคุณจะจำอะไรไว้\n2. ถามฉันเรื่องที่ไม่ชัดหรือเก่าไปแล้ว\n3. บอกว่าส่วนไหนควรบันทึกลงความจำหรือคำสั่งของคุณ และช่องตั้งค่านั้นอยู่ตรงไหน\n\n--- จดหมาย ---\n"}
+};
+var OWN=[
+{name:"LM Studio",url:"https://lmstudio.ai/",on:{en:"Mac, Windows, Linux",th:"Mac, Windows, Linux"},note:{en:"Point and click. Pick a model from a list, chat.",th:"กดเลือกได้หมด เลือกโมเดลจากรายการ แล้วคุยเลย"}},
+{name:"Jan",url:"https://jan.ai/",on:{en:"Mac, Windows, Linux",th:"Mac, Windows, Linux"},note:{en:"Open source. Chats saved as files in its folder.",th:"โอเพนซอร์ส แชทเก็บเป็นไฟล์ในโฟลเดอร์ของแอป"}},
+{name:"Ollama",url:"https://ollama.com/",on:{en:"Mac, Windows, Linux",th:"Mac, Windows, Linux"},note:{en:"Runs models for other apps to use; has its own chat window.",th:"รันโมเดลให้แอปอื่นใช้ มีหน้าต่างแชทของตัวเองด้วย"}},
+{name:"PocketPal AI",url:"https://github.com/a-ghorbani/pocketpal-ai",on:{en:"iPhone, Android",th:"iPhone, Android"},note:{en:"Small models on the phone; works offline once downloaded.",th:"โมเดลเล็กในมือถือ ดาวน์โหลดแล้วใช้ได้แม้ไม่มีเน็ต"}},
+{name:"Typhoon",url:"https://opentyphoon.ai/",on:{en:"model family",th:"ชุดโมเดล"},note:{en:"Thai-language models from SCB 10X; load them in the apps above.",th:"โมเดลภาษาไทยจาก SCB 10X ใช้กับแอปข้างบนได้"}}
+];
+var CHECKED="29 Sep 2026";
+function M(s){return '<span class="path">'+s+'</span>';}
+var LAWS=[
+{id:"th",where:{en:"Thailand",th:"ไทย"},law:"PDPA B.E. 2562",rights:{en:"copy s.30 · take it elsewhere s.31 · delete s.33",th:"ขอสำเนา ม.30 · ขอไฟล์ไปใช้ที่อื่น ม.31 · ขอลบ ม.33"},time:{en:"30 days",th:"30 วัน"},cite:"sections 30 and 31 of Thailand's Personal Data Protection Act B.E. 2562 (2019)",due:"within 30 days of receiving this request",src:"https://cc.kmutt.ac.th/Files/Act%20Eng/personal-data-protection-act-2019-en.pdf"},
+{id:"eu",where:{en:"European Union",th:"สหภาพยุโรป"},law:"GDPR",rights:{en:"copy Art.15 · take it elsewhere Art.20 · delete Art.17",th:"ขอสำเนา ม.15 · ขอไฟล์ไปใช้ที่อื่น ม.20 · ขอลบ ม.17"},time:{en:"1 month (up to 3)",th:"1 เดือน (ขยายได้ถึง 3)"},cite:"Articles 15 and 20 of the General Data Protection Regulation (GDPR)",due:"within one month of receiving this request, as Article 12(3) requires",src:"https://eur-lex.europa.eu/eli/reg/2016/679/oj"},
+{id:"uk",where:{en:"United Kingdom",th:"สหราชอาณาจักร"},law:"UK GDPR",rights:{en:"copy Art.15 · take it elsewhere Art.20 · delete Art.17",th:"ขอสำเนา ม.15 · ขอไฟล์ไปใช้ที่อื่น ม.20 · ขอลบ ม.17"},time:{en:"1 month",th:"1 เดือน"},cite:"Articles 15 and 20 of the UK GDPR",due:"within one month of receiving this request",src:"https://www.gov.uk/guidance/data-use-and-access-act-2025-data-protection-and-privacy-changes"},
+{id:"ca",where:{en:"California",th:"แคลิฟอร์เนีย"},law:"CCPA / CPRA",rights:{en:"copy §1798.110 · usable format §1798.130 · delete §1798.105",th:"ขอสำเนา §1798.110 · ไฟล์ที่เอาไปใช้ได้ §1798.130 · ขอลบ §1798.105"},time:{en:"45 days (up to 90)",th:"45 วัน (ขยายได้ถึง 90)"},cite:"the California Consumer Privacy Act (Cal. Civ. Code §§1798.100, 1798.110 and 1798.130)",due:"within 45 days of receiving this request",src:"https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1798.130"},
+{id:"br",where:{en:"Brazil",th:"บราซิล"},law:"LGPD",rights:{en:"copy, take it elsewhere, delete: Art.18",th:"ขอสำเนา ขอไฟล์ไปใช้ที่อื่น ขอลบ: ม.18"},time:{en:"15 days",th:"15 วัน"},cite:"Articles 18 and 19 of Brazil's General Data Protection Law (LGPD)",due:"within 15 days of receiving this request, as Article 19 requires",src:"https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm"},
+{id:"other",where:{en:"Somewhere else",th:"ที่อื่น"},law:{en:"your local data law",th:"กฎหมายข้อมูลส่วนบุคคลที่คุณอยู่"},rights:{en:"most cover a copy and deletion",th:"ส่วนใหญ่ให้ขอสำเนาและขอลบได้"},time:{en:"varies",th:"แล้วแต่ที่"},cite:"the data protection law that applies where I live, and your own privacy policy",due:"within the time that law and your privacy policy allow"}
+];
+var PLATFORMS=[
+{id:"chatgpt",name:"ChatGPT",company:"OpenAI",
+ export:{en:"Settings → Data controls → Export data → Export, then confirm.",th:"ไปที่ Settings → Data controls → Export data → Export แล้วกดยืนยัน"},exportSrc:"https://help.openai.com/en/articles/7260999",
+ arrives:{en:"A ZIP file by email, within 7 days. The link works for 24 hours. Not on Business or Enterprise plans.",th:"ไฟล์ ZIP ส่งมาทางอีเมล ภายใน 7 วัน ลิงก์ใช้ได้ 24 ชั่วโมง แพ็กเกจ Business และ Enterprise ทำไม่ได้"},
+ memory:{en:"Memories: "+M("Settings → Personalization → Memory")+". Instructions: "+M("Settings → Personalization → Custom instructions")+" (phone: Customize ChatGPT).",th:"ความจำ: "+M("Settings → Personalization → Memory")+" คำสั่ง: "+M("Settings → Personalization → Custom instructions")+" (ในมือถือ: Customize ChatGPT)"},memorySrc:"https://help.openai.com/en/articles/8590148",
+ import:{en:"No import button. Paste the moving letter into a new chat and ask it to remember.",th:"ไม่มีปุ่มนำเข้า วางจดหมายย้ายบ้านในแชทใหม่ แล้วบอกให้จำไว้"},
+ instr:{en:"Put how you like answers into "+M("Settings → Personalization → Custom instructions")+".",th:"ใส่วิธีที่คุณชอบให้ตอบลงใน "+M("Settings → Personalization → Custom instructions")},instrSrc:"https://help.openai.com/en/articles/8096356",
+ training:{en:"Settings → Data controls → turn off “Improve the model for everyone”.",th:"Settings → Data controls → ปิด “Improve the model for everyone”"},trainingSrc:"https://help.openai.com/en/articles/7730893",
+ remove:{en:"Settings → Account → Delete. OpenAI deletes the data within 30 days.",th:"Settings → Account → Delete ข้อมูลถูกลบภายใน 30 วัน"},removeSrc:"https://help.openai.com/en/articles/6378407",
+ privacy:{to:"privacy.openai.com",url:"https://privacy.openai.com/"}},
+{id:"claude",name:"Claude",company:"Anthropic",
+ export:{en:"Settings → Privacy → Export data. On the website or desktop app; the phone app can't.",th:"Settings → Privacy → Export data ทำในเว็บหรือแอปคอมพิวเตอร์ ในมือถือทำไม่ได้"},exportSrc:"https://support.claude.com/en/articles/9450526",
+ arrives:{en:"A link by email. Sign in to download. It works for 24 hours.",th:"ลิงก์ส่งมาทางอีเมล ต้องล็อกอินก่อนดาวน์โหลด ใช้ได้ 24 ชั่วโมง"},
+ memory:{en:"Memories: "+M("Settings → Memory")+". Instructions: "+M("Settings → Instructions for Claude")+". Each Project has its own instructions too.",th:"ความจำ: "+M("Settings → Memory")+" คำสั่ง: "+M("Settings → Instructions for Claude")+" แต่ละ Project มีคำสั่งของตัวเองด้วย"},memorySrc:"https://support.claude.com/en/articles/12123587",
+ import:{en:M("Settings → Memory → Start import")+". Claude gives you a prompt to run at the old AI; paste its answer back. Brings memory, not chat history. Free and paid plans, website and desktop.",th:M("Settings → Memory → Start import")+" Claude ให้ข้อความไปถาม AI ตัวเก่า แล้วเอาคำตอบมาวาง ได้ความจำ ไม่ได้แชทเก่า ใช้ได้ทั้งฟรีและจ่ายเงิน ในเว็บและแอปคอมพิวเตอร์"},importSrc:"https://support.claude.com/en/articles/12123587",
+ instr:{en:"Put how you like answers into "+M("Settings → Instructions for Claude")+".",th:"ใส่วิธีที่คุณชอบให้ตอบลงใน "+M("Settings → Instructions for Claude")},instrSrc:"https://support.claude.com/en/articles/10185728",
+ training:{en:"Settings → Privacy → “Help improve our AI models” switch.",th:"Settings → Privacy → สวิตช์ “Help improve our AI models”"},trainingSrc:"https://privacy.claude.com/en/articles/12109829",
+ remove:{en:"Settings → Account → Delete account. On Pro or Max, cancel first and wait for the paid month to end.",th:"Settings → Account → Delete account ถ้าใช้ Pro หรือ Max ยกเลิกก่อน รอให้เดือนที่จ่ายแล้วหมด"},removeSrc:"https://support.claude.com/en/articles/9028421",
+ privacy:{to:"privacy@anthropic.com",url:"mailto:privacy@anthropic.com"}},
+{id:"gemini",name:"Gemini",company:"Google",
+ export:{en:"Go to "+M("takeout.google.com")+" → Deselect all → tick “Gemini” (your Gems) and “My Activity” → in My Activity pick only “Gemini Apps” (chats, pictures, uploads).",th:"ไปที่ "+M("takeout.google.com")+" → Deselect all → ติ๊ก “Gemini” (Gems ของคุณ) และ “My Activity” → ใน My Activity เลือกแค่ “Gemini Apps” (แชท รูป ไฟล์ที่อัปโหลด)"},exportSrc:"https://support.google.com/gemini/answer/16920332",
+ arrives:{en:"A link by email, usually the same day.",th:"ลิงก์ส่งมาทางอีเมล ส่วนใหญ่ได้ภายในวันเดียว"},
+ memory:{en:"Saved memories: "+M("Settings & help → Personal context")+" (gemini.google.com/saved-info).",th:"ความจำ: "+M("Settings & help → Personal context")+" (gemini.google.com/saved-info)"},memorySrc:"https://support.google.com/gemini/answer/16413516",
+ import:{en:M("Settings & help → Import memory to Gemini")+". Paste the moving letter as memory. “Import chats” takes a ChatGPT or Claude export .zip (up to 5 GB, 5 a day) and brings the old chats in. Personal accounts, 18+. Not in the EU, Switzerland or UK. Google may use imported chats to train its models.",th:M("Settings & help → Import memory to Gemini")+" วางจดหมายย้ายบ้านเป็นความจำ ปุ่ม “Import chats” รับไฟล์ .zip จาก ChatGPT หรือ Claude (ไม่เกิน 5 GB วันละ 5 ไฟล์) เอาแชทเก่าเข้ามาได้เลย บัญชีส่วนตัว อายุ 18 ขึ้นไป ใช้ในยุโรป สวิตเซอร์แลนด์ และอังกฤษไม่ได้ Google อาจเอาแชทที่นำเข้าไปฝึก AI"},importSrc:"https://support.google.com/gemini/answer/16868299",
+ instr:{en:"Anything left over goes into "+M("Personal context")+".",th:"ที่เหลือใส่ใน "+M("Personal context")},
+ training:{en:"Settings & help → Activity → turn off “Keep Activity”. Google still holds chats up to 72 hours.",th:"Settings & help → Activity → ปิด “Keep Activity” Google ยังเก็บแชทไว้ไม่เกิน 72 ชั่วโมง"},trainingSrc:"https://support.google.com/gemini/answer/13594961",
+ remove:{en:"Chats: Activity → Delete. The whole Google account is a separate step, and takes Gmail and Photos with it.",th:"ลบแชท: Activity → Delete ลบบัญชี Google ทั้งหมดเป็นอีกเรื่อง Gmail และรูปจะหายไปด้วย"},removeSrc:"https://support.google.com/accounts/answer/32046",
+ privacy:{to:"Google Data Protection Office form",url:"https://support.google.com/policies/contact/data_privacy_office"}},
+{id:"copilot",name:"Copilot",company:"Microsoft",
+ export:{en:"Microsoft privacy dashboard ("+M("account.microsoft.com/privacy")+") → Copilot → Copilot app activity history → “Export all activity history”.",th:"หน้าความเป็นส่วนตัวของ Microsoft ("+M("account.microsoft.com/privacy")+") → Copilot → Copilot app activity history → “Export all activity history”"},exportSrc:"https://support.microsoft.com/en-us/privacy/manage-your-copilot-activity-history-in-the-privacy-dashboard",
+ arrives:{en:"A CSV spreadsheet file, downloaded straight away.",th:"ไฟล์ตาราง CSV ดาวน์โหลดได้ทันที"},
+ memory:{en:"Memories: "+M("Settings → Personalization → Saved memories")+".",th:"ความจำ: "+M("Settings → Personalization → Saved memories")},memorySrc:"https://support.microsoft.com/en-us/privacy/microsoft-copilot/privacy-controls",
+ import:{en:"No import button. Paste the moving letter into a new chat and ask it to remember; check Saved memories after.",th:"ไม่มีปุ่มนำเข้า วางจดหมายย้ายบ้านในแชทใหม่ บอกให้จำไว้ แล้วเปิดดู Saved memories"},
+ training:{en:"Microsoft says the new Copilot app (from 18 Aug 2026) doesn't use your chats to train its foundation models. Older app: Profile → Privacy → turn off “Training on conversation activity” and “Training on voice conversations”.",th:"Microsoft บอกว่าแอป Copilot ใหม่ (ตั้งแต่ 18 ส.ค. 2026) ไม่เอาแชทไปฝึกโมเดลหลัก แอปเก่า: Profile → Privacy → ปิด “Training on conversation activity” และ “Training on voice conversations”"},trainingSrc:"https://support.microsoft.com/en-us/privacy/microsoft-copilot/activity-history",
+ remove:{en:"Copilot uses your Microsoft account; closing it takes Outlook and OneDrive with it.",th:"Copilot ใช้บัญชี Microsoft ปิดบัญชีแล้ว Outlook และ OneDrive หายไปด้วย"},removeSrc:"https://www.microsoft.com/en-us/privacy/privacystatement",
+ privacy:{to:"aka.ms/privacyresponse",url:"https://aka.ms/privacyresponse"}},
+{id:"meta",name:"Meta AI",company:"Meta",
+ export:{en:"Meta AI app → Menu → Settings → Data & privacy → Manage your information → Download your information → Create export. Pick JSON.",th:"แอป Meta AI → Menu → Settings → Data & privacy → Manage your information → Download your information → Create export เลือก JSON"},exportSrc:"https://www.meta.com/help/artificial-intelligence/1314808549771571/",
+ arrives:{en:"Email can take up to 30 days; then 4 days to download. Chats you deleted aren't in it.",th:"อีเมลอาจนานถึง 30 วัน แล้วมีเวลาดาวน์โหลด 4 วัน แชทที่ลบไปแล้วไม่อยู่ในไฟล์"},
+ memory:{en:"Meta's help pages don't say where memory lives. Ask it: “What do you remember about me?”",th:"หน้าช่วยเหลือของ Meta ไม่ได้บอกว่าความจำอยู่ตรงไหน ถามมันเลย: “คุณจำอะไรเกี่ยวกับฉันได้บ้าง”"},
+ import:{en:"No import button. Paste the moving letter into a chat.",th:"ไม่มีปุ่มนำเข้า วางจดหมายย้ายบ้านในแชท"},
+ training:{en:"No switch on Meta's help pages. Meta says it uses your AI chats to improve AI at Meta.",th:"หน้าช่วยเหลือของ Meta ไม่มีสวิตช์นี้ Meta บอกว่าใช้แชทกับ AI ไปปรับปรุง AI ของ Meta"},trainingSrc:"https://www.meta.com/help/artificial-intelligence/2457110494637611/",
+ remove:{en:"Settings → Data & privacy → Manage your information → “Delete all chats and media”.",th:"Settings → Data & privacy → Manage your information → “Delete all chats and media”"},removeSrc:"https://www.meta.com/help/artificial-intelligence/2457110494637611/",
+ privacy:{to:"help.meta.com/support/privacy",url:"https://help.meta.com/support/privacy/"}},
+{id:"grok",name:"Grok",company:"xAI",
+ export:{en:"Settings → Data Controls → download your data.",th:"Settings → Data Controls → ดาวน์โหลดข้อมูล"},exportSrc:"https://x.ai/legal/faq",
+ arrives:{en:"xAI's pages don't give the format or wait.",th:"หน้าของ xAI ไม่ได้บอกรูปแบบไฟล์หรือเวลารอ"},
+ memory:{en:"Ask it: “What do you remember about me?”",th:"ถามมันเลย: “คุณจำอะไรเกี่ยวกับฉันได้บ้าง”"},
+ import:{en:"No import button. Paste the moving letter into a chat.",th:"ไม่มีปุ่มนำเข้า วางจดหมายย้ายบ้านในแชท"},
+ training:{en:"Settings → Data Controls → untick “Improve the model”. Private Chat isn't used for training, xAI says.",th:"Settings → Data Controls → เอาติ๊ก “Improve the model” ออก xAI บอกว่า Private Chat ไม่ถูกเอาไปฝึก"},trainingSrc:"https://x.ai/legal/faq",
+ remove:{en:"Settings → Data Controls → Delete Account (or Delete All Conversations). Deleted within 30 days.",th:"Settings → Data Controls → Delete Account (หรือ Delete All Conversations) ลบภายใน 30 วัน"},removeSrc:"https://x.ai/legal/faq",
+ privacy:{to:"x.ai/privacy-portal",url:"https://x.ai/privacy-portal/"}},
+{id:"perplexity",name:"Perplexity",company:"Perplexity",
+ export:{en:"Go to "+M("perplexity.ai/account/details")+" → “Export my data”.",th:"ไปที่ "+M("perplexity.ai/account/details")+" → “Export my data”"},exportSrc:"https://www.perplexity.ai/help-center/en/articles/11564568",
+ arrives:{en:"A link by email.",th:"ลิงก์ส่งมาทางอีเมล"},
+ memory:{en:"Ask it: “What do you remember about me?”",th:"ถามมันเลย: “คุณจำอะไรเกี่ยวกับฉันได้บ้าง”"},
+ import:{en:"No import button. Paste the moving letter into a chat.",th:"ไม่มีปุ่มนำเข้า วางจดหมายย้ายบ้านในแชท"},
+ training:{en:"Account settings → Preferences → turn off “AI data retention”. Counts from that day on.",th:"Account settings → Preferences → ปิด “AI data retention” มีผลตั้งแต่วันที่ปิด"},trainingSrc:"https://www.perplexity.ai/help-center/en/articles/11564572",
+ remove:{en:"Account settings → Delete account. Takes up to 30 days; signing back in cancels it.",th:"Account settings → Delete account ใช้เวลาถึง 30 วัน ถ้าล็อกอินกลับจะยกเลิกการลบ"},removeSrc:"https://www.perplexity.ai/help-center/en/articles/11564562",
+ privacy:{to:"perplexity.typeform.com/datarequest",url:"https://perplexity.typeform.com/datarequest"}},
+{id:"deepseek",name:"DeepSeek",company:"DeepSeek",
+ export:{en:"DeepSeek's privacy policy says you can copy or delete chat history in Settings. Guides show "+M("Settings → Data → Export data")+".",th:"นโยบายความเป็นส่วนตัวของ DeepSeek บอกว่าคัดลอกหรือลบประวัติแชทได้ใน Settings คู่มือทั่วไปบอกว่าอยู่ที่ "+M("Settings → Data → Export data")},exportSrc:"https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html",
+ arrives:{en:"A JSON file, by those guides. DeepSeek stores data in China.",th:"ไฟล์ JSON ตามคู่มือ DeepSeek เก็บข้อมูลไว้ในจีน"},
+ memory:{en:"Ask it: “What do you remember about me?”",th:"ถามมันเลย: “คุณจำอะไรเกี่ยวกับฉันได้บ้าง”"},
+ import:{en:"No import button. Paste the moving letter at the start of each new chat.",th:"ไม่มีปุ่มนำเข้า วางจดหมายย้ายบ้านตอนเริ่มแชทใหม่ทุกครั้ง"},
+ training:{en:"The privacy policy gives you the right to opt out of training. Guides show a switch, “Improve the model for everyone”, in Settings.",th:"นโยบายให้สิทธิ์ขอไม่ให้เอาไปฝึก คู่มือบอกว่ามีสวิตช์ “Improve the model for everyone” ใน Settings"},trainingSrc:"https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html",
+ remove:{en:"Delete chats in Settings; for the account, write to privacy@deepseek.com if you can't find the button.",th:"ลบแชทใน Settings ถ้าหาปุ่มลบบัญชีไม่เจอ เขียนถึง privacy@deepseek.com"},
+ privacy:{to:"privacy@deepseek.com",url:"mailto:privacy@deepseek.com"}},
+{id:"mistral",name:"Le Chat / Vibe",company:"Mistral AI",
+ export:{en:"Mistral's export tool → Export. (Mistral's help pages now call Le Chat “Vibe”.)",th:"เครื่องมือ export ของ Mistral → Export (หน้าช่วยเหลือของ Mistral เรียก Le Chat ว่า “Vibe” แล้ว)"},exportSrc:"https://help.mistral.ai/en/articles/347623",
+ arrives:{en:"Mistral's pages don't give the format.",th:"หน้าของ Mistral ไม่ได้บอกรูปแบบไฟล์"},
+ memory:{en:"Memories (beta) in Settings: view, add, edit, delete.",th:"Memories (ทดลอง) ใน Settings ดู เพิ่ม แก้ ลบได้"},memorySrc:"https://help.mistral.ai/en/articles/396497",
+ import:{en:"No import button. Paste the moving letter into a chat, then add the parts you want to Memories.",th:"ไม่มีปุ่มนำเข้า วางจดหมายย้ายบ้านในแชท แล้วเพิ่มส่วนที่อยากให้จำลงใน Memories"},importSrc:"https://help.mistral.ai/en/articles/396497",
+ training:{en:"Personal accounts start switched on. Web: Admin panel → Vibe → Privacy → turn off “Allow your interactions to be used to train our models”. Phone: Settings → Data & Account Controls → untick “Enable data sharing”.",th:"บัญชีส่วนตัวเปิดไว้ตั้งแต่แรก เว็บ: Admin panel → Vibe → Privacy → ปิด “Allow your interactions to be used to train our models” มือถือ: Settings → Data & Account Controls → เอาติ๊ก “Enable data sharing” ออก"},trainingSrc:"https://help.mistral.ai/en/articles/455207",
+ remove:{en:"Admin panel → Account → Danger Zone → Delete account.",th:"Admin panel → Account → Danger Zone → Delete account"},removeSrc:"https://help.mistral.ai/en/articles/347619",
+ privacy:{to:"Mistral privacy request form",url:"https://help.mistral.ai/en/articles/347639"}},
+{id:"kimi",name:"Kimi",company:"Moonshot AI",
+ export:{en:"No bulk export on Kimi's pages. Copy the chats you need one by one with the Copy button, or send the request letter below.",th:"หน้าของ Kimi ไม่มีปุ่ม export ทั้งหมด คัดลอกแชทที่ต้องการทีละอันด้วยปุ่ม Copy หรือส่งจดหมายขอข้อมูลข้างล่าง"},exportSrc:"https://www.kimi.com/user/agreement/userPrivacy?version=v2",
+ arrives:{en:"Kimi stores data in China.",th:"Kimi เก็บข้อมูลไว้ในจีน"},
+ memory:{en:"Memory is in Kimi's settings: view, manage or turn off.",th:"ความจำอยู่ในการตั้งค่าของ Kimi ดู จัดการ หรือปิดได้"},
+ import:{en:"No import button. Paste the moving letter into a chat.",th:"ไม่มีปุ่มนำเข้า วางจดหมายย้ายบ้านในแชท"},
+ training:{en:"By email only: write to support@moonshot.cn. Done in 5–7 working days, past and future chats.",th:"ทางอีเมลเท่านั้น: เขียนถึง support@moonshot.cn ใช้เวลา 5–7 วันทำการ มีผลทั้งแชทเก่าและใหม่"},trainingSrc:"https://www.kimi.com/help/others/data-usage",
+ remove:{en:"App: Settings → Account Security → Delete Account. Web: Settings → Account Settings → Delete Account.",th:"แอป: Settings → Account Security → Delete Account เว็บ: Settings → Account Settings → Delete Account"},removeSrc:"https://www.kimi.com/help/others/account-deletion",
+ privacy:{to:"support@moonshot.cn",url:"mailto:support@moonshot.cn"}},
+{id:"own",name:{en:"My own computer",th:"คอมพิวเตอร์ของฉัน"},
+ export:{en:"Chats sit in the app's folder on your computer. Copy that folder.",th:"แชทอยู่ในโฟลเดอร์ของแอปในเครื่องคุณ คัดลอกโฟลเดอร์นั้นไป"},
+ arrives:{en:"Take the folder on a USB stick or cloud drive.",th:"ใส่ USB หรือไดรฟ์ออนไลน์ไป"},
+ memory:{en:"Standing instructions live in the app's “system prompt” box. Copy them.",th:"คำสั่งประจำอยู่ในช่อง “system prompt” ของแอป คัดลอกไป"},
+ import:{en:"Paste the moving letter into the app's “system prompt” box (the instructions it reads before every chat). See the apps below.",th:"วางจดหมายย้ายบ้านในช่อง “system prompt” ของแอป (คำสั่งที่มันอ่านก่อนทุกแชท) ดูรายชื่อแอปข้างล่าง"},
+ remove:{en:"Delete the folder when you're ready.",th:"พร้อมเมื่อไหร่ ลบโฟลเดอร์ทิ้ง"}}
+];
+/*DATA-END*/
+</script>
+<script>
+(function(){
+var root=document.documentElement;
+function T(o){return o==null?"":(typeof o==="string"?o:(root.getAttribute("data-lang")==="th"?o.th:o.en));}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+var from=null,to=null;
+
+function setLang(l){
+  root.setAttribute("data-lang",l);root.lang=l;
+  document.querySelectorAll(".lang button").forEach(function(b){b.setAttribute("aria-pressed",String(b.dataset.l===l));});
+  try{localStorage.setItem("md-lang",l);}catch(e){}
+  renderAll();
+}
+document.querySelectorAll(".lang button").forEach(function(b){b.addEventListener("click",function(){setLang(b.dataset.l);});});
+
+var srcList=[];
+function cite(u){if(!u)return "";var i=srcList.indexOf(u);if(i<0){srcList.push(u);i=srcList.length-1;}return ' <a class="src" href="#src'+(i+1)+'">['+(i+1)+']</a>';}
+
+function renderLaws(){
+  var h='<table><thead><tr><th>'+T({th:"ที่ไหน",en:"Where"})+'</th><th>'+T({th:"กฎหมาย",en:"Law"})+'</th><th>'+T({th:"สิทธิ์",en:"Rights"})+'</th><th>'+T({th:"ตอบภายใน",en:"Answer within"})+'</th></tr></thead><tbody>';
+  LAWS.forEach(function(l){h+='<tr><td>'+esc(T(l.where))+'</td><td>'+esc(T(l.law))+cite(l.src)+'</td><td>'+esc(T(l.rights))+'</td><td>'+esc(T(l.time))+'</td></tr>';});
+  document.getElementById("laws").innerHTML=h+'</tbody></table>';
+}
+
+function pills(el,sel,cb,other){
+  el.innerHTML="";
+  PLATFORMS.forEach(function(p){
+    var b=document.createElement("button");b.type="button";b.textContent=T(p.name);
+    b.setAttribute("aria-pressed",String(sel===p.id));
+    if(other===p.id&&p.id!=="own")b.disabled=true;
+    b.addEventListener("click",function(){cb(p.id);});
+    el.appendChild(b);
+  });
+}
+function P(id){for(var i=0;i<PLATFORMS.length;i++)if(PLATFORMS[i].id===id)return PLATFORMS[i];}
+function step(title,body){return body?'<li><h3>'+title+'</h3>'+body+'</li>':'';}
+function para(o,src){var t=T(o);if(!t)return "";return '<p>'+t+cite(src)+'</p>';}
+
+function renderPlan(){
+  pills(document.getElementById("from"),from,function(id){from=id;renderPlan();},to);
+  pills(document.getElementById("to"),to,function(id){to=id;renderPlan();},from);
+  var out=document.getElementById("plan");
+  if(!from||!to){out.innerHTML='<p class="small">'+T({th:"เลือกบ้านเก่าและบ้านใหม่ แผนจะขึ้นตรงนี้",en:"Pick the old place and the new one. The plan appears here."})+'</p>';return;}
+  var a=P(from),b=P(to),h='<ol class="plan">';
+  h+=step(T({th:"แพ็กของที่ ",en:"Pack at "})+esc(T(a.name)),para(a.export,a.exportSrc)+para(a.arrives));
+  h+=step(T({th:"คัดลอกความจำและคำสั่งจาก ",en:"Copy memory and instructions from "})+esc(T(a.name)),para(a.memory,a.memorySrc)+'<p><a href="#box">'+T({th:"แล้วขอจดหมายย้ายบ้าน ↓",en:"Then ask for the moving letter ↓"})+'</a></p>');
+  h+=step(T({th:"ย้ายเข้าที่ ",en:"Move in at "})+esc(T(b.name)),para(b.import,b.importSrc)+para(b.instr,b.instrSrc)+'<p><a href="#movein">'+T({th:"ข้อความย้ายเข้า ↓",en:"The move-in message ↓"})+'</a></p>');
+  h+=step(T({th:"ตั้งค่าการเอาแชทไปฝึก AI ที่ ",en:"Training setting at "})+esc(T(b.name)),para(b.training,b.trainingSrc));
+  h+=step(T({th:"ปิดบ้านเก่า (ถ้าอยาก) ",en:"Close up (if you want) "})+esc(T(a.name)),para(a.remove,a.removeSrc)+'<p><a href="#close">'+T({th:"อ่านก่อนลบ ↓",en:"Read before deleting ↓"})+'</a></p>');
+  out.innerHTML=h+'</ol><p class="small">'+T({th:"การฝึก AI (training) คือบริษัทเอาแชทของคุณไปสอน AI รุ่นต่อไป",en:"Training: the company uses your chats to teach its next AI models."})+'</p>';
+}
+
+function renderPrompts(){
+  document.getElementById("letterOut").value=T(PROMPTS.letter);
+  document.getElementById("moveinOut").value=T(PROMPTS.movein);
+}
+
+function fillSelect(el,items,label){
+  var v=el.value;el.innerHTML="";
+  items.forEach(function(it){var o=document.createElement("option");o.value=it.id;o.textContent=label(it);el.appendChild(o);});
+  if(v)el.value=v;
+}
+function renderRequest(){
+  var co=document.getElementById("lCo"),lw=document.getElementById("lLaw");
+  fillSelect(co,PLATFORMS.filter(function(p){return p.privacy;}),function(p){return T(p.name)+" · "+p.company;});
+  fillSelect(lw,LAWS,function(l){return T(l.where)+" · "+T(l.law);});
+  var p=P(co.value),l=null;LAWS.forEach(function(x){if(x.id===lw.value)l=x;});
+  if(!p||!l)return;
+  var name=document.getElementById("lName").value.trim()||"[your name]";
+  var mail=document.getElementById("lEmail").value.trim()||"[account email]";
+  var d=new Date().toISOString().slice(0,10);
+  document.getElementById("reqOut").value=
+"To: "+p.privacy.to+"\nSubject: Data access and portability request\n\n"+
+"Dear "+p.company+" privacy team,\n\n"+
+"Under "+l.cite+", I request:\n\n"+
+"1. A copy of all personal data you hold about me, including my conversation history, saved memories, custom instructions or personalization settings, projects, uploaded files and images, and account and billing records.\n"+
+"2. That data in a structured, commonly used, machine-readable format (for example JSON), so that I can move it to another service.\n"+
+"3. The purposes of processing, the categories of recipients, and how long you keep it.\n\n"+
+"Account email: "+mail+"\n\n"+
+"Please reply "+l.due+". If you need to verify my identity, write to me at the email above.\n\n"+
+"Thank you,\n"+name+"\n"+d;
+  document.getElementById("lSend").innerHTML=T({th:"ส่งที่: ",en:"Send to: "})+(p.privacy.url?'<a href="'+esc(p.privacy.url)+'">'+esc(p.privacy.to)+'</a>':esc(p.privacy.to));
+}
+["lName","lEmail","lCo","lLaw"].forEach(function(id){var e=document.getElementById(id);e.addEventListener("input",renderRequest);e.addEventListener("change",renderRequest);});
+
+function renderOwn(){
+  var h='<table><thead><tr><th>'+T({th:"แอป",en:"App"})+'</th><th>'+T({th:"ใช้กับ",en:"Runs on"})+'</th><th>'+T({th:"หมายเหตุ",en:"Notes"})+'</th></tr></thead><tbody>';
+  OWN.forEach(function(o){h+='<tr><td><a href="'+esc(o.url)+'">'+esc(o.name)+'</a></td><td>'+esc(T(o.on))+'</td><td>'+esc(T(o.note))+'</td></tr>';});
+  document.getElementById("ownList").innerHTML=h+'</tbody></table>';
+}
+
+function renderSources(){
+  document.getElementById("sources").innerHTML=srcList.map(function(u,i){return '<li id="src'+(i+1)+'"><a href="'+esc(u)+'">'+esc(u)+'</a></li>';}).join("");
+  document.getElementById("checked").textContent=CHECKED;
+}
+
+function renderAll(){srcList=[];renderLaws();renderPlan();renderPrompts();renderRequest();renderOwn();renderSources();}
+
+document.querySelectorAll("[data-copy]").forEach(function(b){
+  b.addEventListener("click",function(){
+    var t=document.getElementById(b.dataset.copy),done=b.parentNode.querySelector(".done");
+    function ok(){done.hidden=false;done.textContent=T({th:"คัดลอกแล้ว ✓",en:"Copied ✓"});setTimeout(function(){done.hidden=true;},2400);}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.value).then(ok,function(){t.select();document.execCommand("copy");ok();});}
+    else{t.select();document.execCommand("copy");ok();}
+  });
+});
+
+var saved=null;try{saved=localStorage.getItem("md-lang");}catch(e){}
+setLang(saved==="en"?"en":"th");
+})();
+</script>
+</body>
+</html>
